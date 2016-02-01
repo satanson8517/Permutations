@@ -9,10 +9,10 @@ public class Main {
 	public static void main(String[] args) {
 		final String str = "many";
 		char[] chrs = str.toCharArray();
-//		System.out.println(chrs);
-//		swap(chrs, 1, 2);
-//		System.out.println(chrs);
 		permutation(chrs, 0, 3);
+		
+		Attributes a = new Attributes();
+		System.out.println(a.x);
 	}
 
 	private static void permutation(char[] chrs, int begin, int end) {
