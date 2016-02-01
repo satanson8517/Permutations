@@ -7,12 +7,28 @@ package com.avg.satanson;
 public class Main {
 
 	public static void main(String[] args) {
-		final String str = "many";
-		char[] chrs = str.toCharArray();
-		permutation(chrs, 0, 3);
-		
-		Attributes a = new Attributes();
-		System.out.println(a.x);
+//		final String str = "many";
+//		char[] chrs = str.toCharArray();
+//		permutation(chrs, 0, 3);
+
+//		Attributes a = new Attributes();
+//		System.out.println(a.x);
+		Parent parent = new Child();
+		System.out.println(parent.s);
+		System.out.println(parent.i);
+	}
+
+	private static void copyArray() {
+		String[] src = new String[]{"a", "b", "c"};
+		for (int i = 0; i < src.length; i++) {
+			System.out.println(src[i]);
+		}
+
+		String[] dest = new String[src.length];
+		System.arraycopy(src, 0, dest, 0, src.length);
+		for (int i = 0; i < dest.length; i++) {
+			System.out.println(dest[i]);
+		}
 	}
 
 	private static void permutation(char[] chrs, int begin, int end) {
